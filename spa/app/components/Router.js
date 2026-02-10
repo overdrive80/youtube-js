@@ -3,6 +3,7 @@ import { ajax } from "../helpers/ajax.js";
 import { PostCard } from "./PostCard.js";
 import { Post } from "./Post.js";
 import { SearchCard } from "./SearchCard.js";
+import { ContactForm } from "./ContactForm.js";
 
 export async function Router() {
   const d = document,
@@ -67,9 +68,7 @@ export async function Router() {
     /* ==============================
      CONTACTO
   ============================== */
-    const $h2 = d.createElement("h2");
-    $h2.textContent = "Sección de contacto";
-    $main.appendChild($h2);
+    $main.appendChild(ContactForm());
   } else {
     /* ==============================
      POST INDIVIDUAL
